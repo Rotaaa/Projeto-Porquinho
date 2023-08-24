@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+    <link rel="stylesheet" href="./porquinho.css">
+<head>
+    <title>MyDolars</title>
+</head>
+
+<body>
+    <img src="./my-dolar.gif">
+    <h1>My Dolars</h1>
+
+    <div>
+        <input id="input-real" type="number" placeholder="Valor em Reais">
+        <input id="input-dolar" placeholder="Valor do Dólar">
+
+        <p id="dolares">$</p>
+        <button onclick="calcularDolar()">Converter</button>
+    </div>
+</body>
+
+<script>
+    function calcularDolar(){
+        let real = document.getElementById("input-real").value //variável guarda valor do real digitado
+        let dolar = document.getElementById("input-dolar").value // varialvel guarda valor do dolar digitado
+
+        let resultado = real / dolar // variavel guarda o valor do resultado
+
+        dolares.innerHTML = '$ ' + resultado // insere o valor do resultado no nosso paragrafo
+
+        alert('O resultado é $'+ resultado + ' dólares') // mostra na tela o resultado
+    }
+</script>
+</html>
